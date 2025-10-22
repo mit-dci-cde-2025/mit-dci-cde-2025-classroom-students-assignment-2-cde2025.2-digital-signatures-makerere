@@ -10,7 +10,7 @@ def parse_sig(signature: str, n):
     return (r, s)
 
 
-def grade(filename="solutions/exercise05.txt"):
+def grade(filename="../solutions/exercise05.txt"):
     # Read transaction data
     with open(filename) as f:
         tx_data = bytes.fromhex(f.read())
@@ -37,5 +37,5 @@ def grade(filename="solutions/exercise05.txt"):
 
 
 if __name__ == "__main__":
-    fname = sys.argv[1] if len(sys.argv) > 1 else "solutions/exercise05.txt"
+    fname = sys.argv[1] if len(sys.argv) > 1 else "../solutions/exercise05.txt"
     print(grade(fname))

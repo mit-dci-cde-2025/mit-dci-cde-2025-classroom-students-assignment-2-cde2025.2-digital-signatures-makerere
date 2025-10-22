@@ -10,7 +10,7 @@ def parse_sig(signature: str, n):
     return (r, s)
 
 
-def grade(filename="solutions/exercise04.txt"):
+def grade(filename="../solutions/exercise04.txt"):
     with open(filename) as f:
         sig_hex = f.read().strip()
 
@@ -43,5 +43,5 @@ def grade(filename="solutions/exercise04.txt"):
 
 
 if __name__ == "__main__":
-    fname = sys.argv[1] if len(sys.argv) > 1 else "solutions/exercise04.txt"
+    fname = sys.argv[1] if len(sys.argv) > 1 else "../solutions/exercise04.txt"
     print(grade(fname))
